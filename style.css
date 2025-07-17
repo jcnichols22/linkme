@@ -1,0 +1,147 @@
+:root {
+    --primary-bg: #1a2332;                  /* dark blue-gray */
+    --primary-accent: #9FEF00;              /* neon green */
+    --primary-text: #EBF4F5;                /* off-white */
+    --secondary-bg: #131826;                /* darker blue-gray */
+    --link-bg: #182032;                     /* panel background */
+    --blue-accent: #1167b1;                 /* subtle blue hint */
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', 'Segoe UI', 'Consolas', 'monospace', sans-serif;
+    background: var(--primary-bg);
+    color: var(--primary-text);
+    min-height: 100vh;
+    letter-spacing: 0.03em;
+}
+
+.container {
+    max-width: 420px;
+    margin: 40px auto;
+    background: var(--secondary-bg);
+    border-radius: 14px;                          /* less round corners */
+    padding: 2.2rem 1.2rem 1.4rem 1.2rem;
+    box-shadow: 0 10px 50px #000a, 0 0 0 2px var(--primary-accent) inset;
+    border: 1px solid #282c34;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: box-shadow 0.2s;
+}
+
+.logo {
+    margin-bottom: 18px;
+}
+
+h1 {
+    margin-top: 8px;
+    margin-bottom: 10px;
+    color: var(--primary-accent);
+    font-family: inherit;
+    font-weight: 800;
+    text-transform: uppercase;
+    font-size: 2.15rem;
+    letter-spacing: 0.07em;
+    text-shadow: 0 0 14px #9FEF0077;
+}
+
+.subtitle {
+    font-size: 1.09rem;
+    color: #b7ff00ee;
+    margin-bottom: 28px;
+    text-align: center;
+    font-weight: 500;
+    text-shadow: 0 0 4px #9FEF0030;
+}
+
+.links {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 17px;
+    margin-bottom: 22px;
+}
+
+.links a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--link-bg);
+    border: 1.5px solid #23272e;
+    border-radius: 7px;
+    padding: 13px 0;
+    color: var(--primary-accent);
+    text-decoration: none;
+    font-size: 1.09rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    box-shadow: 0 0 0 1.5px var(--primary-accent);
+    transition: 
+        background 0.14s, 
+        color 0.12s, 
+        transform 0.11s,
+        box-shadow 0.14s;
+    text-shadow: 0 0 6px #9FEF0033;
+}
+
+.links a:hover, .links a:focus {
+    background: var(--primary-accent);
+    color: #191C22;
+    transform: translateY(-2px) scale(1.02);
+    box-shadow: 0 2px 16px #9fef0040, 0 0 0 1.5px var(--primary-accent);
+    text-shadow: none;
+}
+
+/* Base color for the ansible icon */
+.links a .ansible-icon {
+    fill: var(--primary-accent);   /* same as your links and icon color */
+    transition: fill 0.18s;
+}
+
+/* Color on hover, when the a is hovered */
+.links a:hover .ansible-icon {
+    fill: #191C22;   /* matches the hover text color on links */
+}
+
+
+.socials {
+    display: flex;
+    gap: 22px;
+    margin-bottom: 12px;
+}
+
+.social-icon {
+    color: var(--primary-accent);
+    font-size: 1.7rem;
+    text-decoration: none;
+    filter: drop-shadow(0 0 5px #9FEF0070);
+    transition: color 0.11s, filter 0.15s;
+}
+
+.social-icon:focus, .social-icon:hover {
+    color: #cfff4f;
+    filter: drop-shadow(0 0 15px #b7ff00cc);
+}
+
+footer {
+    margin-top: 16px;
+    font-size: 0.91rem;
+    color: #6b9b36;
+    letter-spacing: 0.02em;
+    opacity: 0.84;
+    text-align: center;
+}
+
+/* Responsive styles */
+@media (max-width: 500px) {
+    .container {
+        margin: 14px 2px;
+        padding: 16px 2px 5px 2px;
+    }
+    h1 { font-size: 1.19rem; }
+    .subtitle { font-size: 0.99rem; }
+    .links a { font-size: 1rem; padding: 8px 0; }
+    .social-icon { font-size: 1.25rem; }
+}
